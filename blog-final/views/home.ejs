@@ -1,0 +1,15 @@
+<%- include('./partials/header');-%>
+<%- include('./partials/flash');-%>
+<% posts.forEach(function(post){ %>
+<a href="/post/<%= post._id %>" id="posta">
+<div id="post">
+<h3 class="text-dark" id="title"><%- post.Title %></h3>
+<p class="text-secondary" id="date"><small><%=post.Author.name %><br>
+<%=post._id.getTimestamp().toLocaleDateString()%></small></p>
+<p class="h6 text-dark" id="Postcontent"><%- post.Content.substring(0,200)+"..." %><span class="h6 text-success">Read more</span>
+</p>
+</div>
+</a>
+<span id="border"></span>
+<% }) %>
+<%- include('./partials/footer');-%>

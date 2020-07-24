@@ -1,0 +1,8 @@
+<%- include('./partials/header');-%>
+<%- include('./partials/flash');-%>
+<form action="/post/<%= post._id %>/edited" method="POST">
+<input class="form-control" type="text" name="title" id="title" value="<%- post.Title %>" ><br>
+<textarea  class="form-control" name="content" id="content" rows="25" col="10"><%- post.Content %></textarea>
+<button class="btn btn-success" type="submit">Publish</button>
+</form>
+<%- include('./partials/footer');-%>

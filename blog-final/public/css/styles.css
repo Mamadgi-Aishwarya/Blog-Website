@@ -1,0 +1,147 @@
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+    height:8vw;
+}
+.active{
+  color: white!important;
+  background-color: rgb(50,205,50);
+  border-radius: 3px;
+  width:auto;
+  height: auto;
+}
+#collapseButton{
+  position:absolute;
+  right:10px;
+}
+@media only screen and (max-width: 600px) {
+  #Postcontent{
+    font-size: 15px;
+  }
+  #title{
+    font-size: 17px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #Postcontent{
+    font-size: 18px;
+  }
+  #title{
+    font-size: 20px;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #Postcontent{
+    font-size: 20px;
+  }
+  #title{
+    font-size: 25px;
+  }
+}
+
+#item
+  {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem; 
+  }
+#item:hover {
+    color: white!important;
+    background-color: rgb(50,205,50);
+    border-radius: 3px;
+    width:auto;
+    height: auto;
+    text-align: left;
+}
+
+.btn{
+    color: white!important;
+    background-color: rgb(50,205,50);
+}
+
+#border{
+    width:60%;
+    border-top:1px solid rgb(50,205,50);
+    border-spacing: 10px;
+    position:absolute;
+    left:20%;
+}
+
+#Postcontent{
+  font-size: 1rem; 
+  white-space: pre-wrap;
+}
+
+
+#butterfly{width:3rem;height:2.5rem;position:absolute;top:2.5rem;cursor: none;}
+#butterflysmall{width:3rem;height:2.5rem;position:absolute;top:2.5rem;right:2rem;cursor: none;}
+#post{
+ padding: 20px;
+ border-left :1px solid rgb(50,205,50);
+ border-right:1px solid rgb(50,205,50);
+}
+#post:hover{
+    box-shadow:  0 5px 5px 0 #4CAF50;
+    text-decoration: none;
+}
+#posta:hover {
+  text-decoration: none;
+}
+#posta:link {
+    text-decoration: none;
+  }
+  
+#posta:visited {
+    text-decoration: none;
+  }
+
+#fullpost{
+  padding:3rem;
+  margin:1rem;
+  border-left:2px solid rgb(50,205,50);
+  border-right:2px solid rgb(50,205,50);
+  border-top:1px solid rgb(50,205,50);
+  box-shadow: 0 6px 6px 0 #4CAF50;
+  margin-bottom: 2rem;
+}
+.form-control:focus {
+    border-color:rgb(50,205,50);;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+#page-container {
+  font-family: "Montserrat", sans-serif;
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    
+    margin:2rem;
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(50,205,50);    
+    text-align: center;
+  }
+
+#deleteModal{
+    display:none;
+}
+
+.img-responsive{
+    width:3rem;
+    height:3rem;
+}

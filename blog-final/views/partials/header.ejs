@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Enligthening Blog</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<body>
+    <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/"><img src="/images/logo.jpg" class="img-responsive"></a>
+      <img class="d-block d-lg-none" src="/images/butterfly.gif" id="butterflysmall"> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="collapseButton">
+        <span class="navbar-toggler-icon"></span>
+       </button>
+       <ul class="navbar-nav d-none d-lg-block">
+       <li class="nav-item active" id="item">
+        <a class="nav-link" href="/post">Home</a>
+       </li>
+       </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <form class="form-inline my-2 my-lg-0" action="/post/search" method="post">
+          <input class="form-control mr-sm-2" type="text" id="search" name="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="margin-right:1rem;">Search</button>
+        </form>
+          <li class="nav-item">
+            <img class="d-none d-lg-block" src="/images/butterfly.gif" id="butterfly">  
+            <a class="nav-link" href="/post/compose" data-toggle="tooltip" data-placement="bottom" title="Create a new post" id="item">Create
+            </a>
+          </li>
+        <%if(locals.user){%>
+          <li class="nav-item" id="item">
+            <a class="nav-link" href="/user/<%= locals.user._id%>/show">My posts</a>
+          </li>
+        <%}%>
+        <%if(!locals.user){%>
+          <li class="nav-item" id="item">
+              <a class="nav-link" href="/user/login">Login</a>
+          </li>
+        <%}%>
+        <%if(locals.user){%>
+          <li class="nav-item" id="item">
+              <a class="nav-link" href="/user/logout">Logout</a>
+          </li>
+        <%}%>
+      </ul>
+   </div>
+  </nav>    
+    <div id="page-container">
+      <div id="content-wrap">
+
